@@ -1,5 +1,4 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
 
 //Snack-1: l'utente inserisce due numeri in successione, il software stampa il maggiore
 Console.Write("Inserisci il primo numero:");
@@ -30,3 +29,25 @@ else
 {
     Console.WriteLine($"{firstWord} {secondWord}");
 }
+
+//Snack-3: il software deve chieder per 10 volte all'utente di inserire un numero, il software stampa la somma di tutti i numeri
+int number;
+int somma = 0;
+for (int i = 0; i < 10; i++)
+{
+    Console.Write("Inserisci un numero: ");
+    number = Convert.ToInt32(Console.ReadLine());
+    somma += number;
+}
+Console.Write($"La somma dei numeri é: {somma} ");
+
+//Snack-4: calcola la somma è la media dei numeri da 2 a 10
+int somma = 0;
+float media;
+for (int i = 2; i <= 10; i++)
+{
+    somma += i;
+}
+media = somma / 9;
+Console.Write($"La somma dei numeri é: {somma} ");
+Console.Write($"La media dei numeri é: {media} ");
