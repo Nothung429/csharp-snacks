@@ -52,33 +52,85 @@
 //Console.Write($"La somma dei numeri é: {somma} ");
 //Console.Write($"La media dei numeri é: {media} ");
 
-//Snack-5: il software chiede all'utente di inserire un numero, se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo
-Console.Write("Inserisci un numero: ");
-int number = Convert.ToInt32(Console.ReadLine());
-if (number % 2 == 0)
-{
-    Console.Write(number);
-}
-else
-{
-    Console.Write(number + 1);
-}
+////Snack-5: il software chiede all'utente di inserire un numero, se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo
+//Console.Write("Inserisci un numero: ");
+//int number = Convert.ToInt32(Console.ReadLine());
+//if (number % 2 == 0)
+//{
+//    Console.Write(number);
+//}
+//else
+//{
+//    Console.Write(number + 1);
+//}
 
-//Snack-6: in un array sono contenuti i nomi degli invitati alla festa del grande Gatsby, chiedi all'utente il suo nome e comunicagli se può partecipare o meno alla festa
-string[] invitati = { "mario", "paolo", "luca" };
-Console.Write("Inserisci il tuo nome:");
-string nomeUtente = Console.ReadLine();
-for (int i = 0; i < invitati.Length; i++)
+////Snack-6: in un array sono contenuti i nomi degli invitati alla festa del grande Gatsby, chiedi all'utente il suo nome e comunicagli se può partecipare o meno alla festa
+//string[] invitati = { "mario", "paolo", "luca" };
+//Console.Write("Inserisci il tuo nome:");
+//string nomeUtente = Console.ReadLine();
+//for (int i = 0; i < invitati.Length; i++)
+//{
+//    string invitato = invitati[i];
+//    if (invitato == nomeUtente)
+//    {
+//        Console.WriteLine("BENVENUTO");
+//        break;
+//    }
+//    else
+//    {        
+//        Console.WriteLine("QUI NON TI VOGLIAMO");
+//        break;
+//    }
+//}
+
+//Snack-7: crea un array vuoto, chiedi per sei volte all'utente di inserire un numero, se è dispari inseriscilo nell'array
+int number;
+int[] odd;
+for (int i = 0; i < 6; i++)
 {
-    string invitato = invitati[i];
-    if (invitato == nomeUtente)
+    Console.Write("\nInserisci un numero: ");
+    number = Convert.ToInt32(Console.ReadLine());
+    if (number % 2 == 0)
     {
-        Console.WriteLine("BENVENUTO");
-        break;
+        Console.Write("\n----pari----\n");
     }
     else
-    {        
-        Console.WriteLine("QUI NON TI VOGLIAMO");
-        break;
+    {
+        odd = new int[number];
+        Console.Write("\n----ok----\n");
     }
 }
+
+//Snack-8: crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari
+int[] oddPosition = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+int somma = 0;
+for (int i = 0; i < oddPosition.Length; i++)
+{
+    if (oddPosition[i] % 2 != 0)
+    {
+        somma += oddPosition[i];
+    }
+}
+Console.WriteLine($"La somma dei numeri in posizione dispari è: {somma}");
+
+//Snack-9: crea un array vuoto e chiedi all'utente un numero da inserire nell'array, continua a chiedere numeri all'utente e a inserirli nell'array, fino a quando la somma degli elementi è minore di 50
+
+
+
+
+
+//Snack-10: fai inserire un numero, che chiameremo N, all'utente, genera N array, ognuno formato da 10 numeri casuali tra 1 e 100, ogni volta che ne crei uno, stampalo a schermo
+//Console.Write("Inserisci un numero numero:");
+//int numberArray = Convert.ToInt32(Console.ReadLine());
+//var rand = new Random();
+//for (int i = 0; i <= numberArray; i++)
+//{
+//    int[] array;
+//    for (int j = 0; j < 10; j++)
+//    {
+//        Console.WriteLine("Five random integers between 0 and 100:");
+//        for (int ctr = 0; ctr <= 4; ctr++)
+//            Console.Write("{0,8:N0}", rand.Next(101));
+//        Console.WriteLine();
+//    }
+//}
