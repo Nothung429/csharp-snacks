@@ -84,40 +84,47 @@
 //}
 
 //Snack-7: crea un array vuoto, chiedi per sei volte all'utente di inserire un numero, se è dispari inseriscilo nell'array
-int number;
-int[] odd;
-for (int i = 0; i < 6; i++)
-{
-    Console.Write("\nInserisci un numero: ");
-    number = Convert.ToInt32(Console.ReadLine());
-    if (number % 2 == 0)
-    {
-        Console.Write("\n----pari----\n");
-    }
-    else
-    {
-        odd = new int[number];
-        Console.Write("\n----ok----\n");
-    }
-}
+//int number;
+//int[] odd;
+//for (int i = 0; i < 6; i++)
+//{
+//    Console.Write("\nInserisci un numero: ");
+//    number = Convert.ToInt32(Console.ReadLine());
+//    if (number % 2 == 0)
+//    {
+//        Console.Write("\n----pari----\n");
+//    }
+//    else
+//    {
+//        odd = new int[number];
+//        Console.Write("\n----ok----\n");
+//    }
+//}
 
 //Snack-8: crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari
-int[] oddPosition = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-int somma = 0;
-for (int i = 0; i < oddPosition.Length; i++)
-{
-    if (oddPosition[i] % 2 != 0)
-    {
-        somma += oddPosition[i];
-    }
-}
-Console.WriteLine($"La somma dei numeri in posizione dispari è: {somma}");
+//int[] oddPosition = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+//int somma = 0;
+//for (int i = 0; i < oddPosition.Length; i++)
+//{
+//    if (oddPosition[i] % 2 != 0)
+//    {
+//        somma += oddPosition[i];
+//    }
+//}
+//Console.WriteLine($"La somma dei numeri in posizione dispari è: {somma}");
 
 //Snack-9: crea un array vuoto e chiedi all'utente un numero da inserire nell'array, continua a chiedere numeri all'utente e a inserirli nell'array, fino a quando la somma degli elementi è minore di 50
+int number;
+int[] array;
+int somma = 0;
 
-
-
-
+while (somma < 50) {
+    Console.Write("\nInserisci un numero: ");
+    number = Convert.ToInt32(Console.ReadLine());
+    array = new int[number];
+    somma += number;
+    Console.Write(somma);
+}
 
 //Snack-10: fai inserire un numero, che chiameremo N, all'utente, genera N array, ognuno formato da 10 numeri casuali tra 1 e 100, ogni volta che ne crei uno, stampalo a schermo
 //Console.Write("Inserisci un numero numero:");
