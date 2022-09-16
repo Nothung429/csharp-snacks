@@ -114,30 +114,28 @@
 //Console.WriteLine($"La somma dei numeri in posizione dispari è: {somma}");
 
 //Snack-9: crea un array vuoto e chiedi all'utente un numero da inserire nell'array, continua a chiedere numeri all'utente e a inserirli nell'array, fino a quando la somma degli elementi è minore di 50
-int number;
-int[] array;
-int somma = 0;
+//int number;
+//int[] array;
+//int somma = 0;
 
-while (somma < 50) {
-    Console.Write("\nInserisci un numero: ");
-    number = Convert.ToInt32(Console.ReadLine());
-    array = new int[number];
-    somma += number;
-    Console.Write(somma);
-}
+//while (somma < 50) {
+//    Console.Write("\nInserisci un numero: ");
+//    number = Convert.ToInt32(Console.ReadLine());
+//    array = new int[number];
+//    somma += number;
+//    Console.Write(somma);
+//}
 
 //Snack-10: fai inserire un numero, che chiameremo N, all'utente, genera N array, ognuno formato da 10 numeri casuali tra 1 e 100, ogni volta che ne crei uno, stampalo a schermo
-//Console.Write("Inserisci un numero numero:");
-//int numberArray = Convert.ToInt32(Console.ReadLine());
-//var rand = new Random();
-//for (int i = 0; i <= numberArray; i++)
-//{
-//    int[] array;
-//    for (int j = 0; j < 10; j++)
-//    {
-//        Console.WriteLine("Five random integers between 0 and 100:");
-//        for (int ctr = 0; ctr <= 4; ctr++)
-//            Console.Write("{0,8:N0}", rand.Next(101));
-//        Console.WriteLine();
-//    }
-//}
+Console.Write("Inserisci un numero numero:");
+int numberArray = Convert.ToInt32(Console.ReadLine());
+for (int i = 0; i <= numberArray; i++)
+{
+    int[] array;
+    for (int j = 0; j < 10; j++)
+    {
+        Random rand = new Random();
+        int number = rand.Next(0, 100);
+        array = new int[number];
+    }
+}
